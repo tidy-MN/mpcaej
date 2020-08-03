@@ -1,7 +1,7 @@
 
 # mpcaej
 
-This package contains two shapefiles provided by the MN Pollution
+:earth_americas: This package contains two shapefiles provided by the MN Pollution
 Control Agency:
 
   - `ej_shapes` *(blue below)*: Census Tract polygons that meet MPCA’s criteria for areas of environmental justice concern.
