@@ -20,7 +20,7 @@ To install `mpcaej` from github:
 library(remotes)
 
 # Install the development version from GitHub
-remotes::install_github("MPCA-data/mpcaej")
+remotes::install_github("tidy-MN/mpcaej")
 ```
 
 -----
