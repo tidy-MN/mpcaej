@@ -8,7 +8,7 @@ Description: Download the polygon shapefiles of MN Census Tracts and Tribal Area
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.1.0
+RoxygenNote: 7.2.3
 Depends: 
     R (>= 2.10)
 Imports: 

@@ -1,7 +1,7 @@
 #' Get MPCA's Environmental Justice Shapefiles from the MN Geocommons
 #'
-#' Download the polygon shapefile of Tribal Areas identified by MPCA
-#' as Environmental Justice areas of concern.
+#' Download the polygon shapefile of Tribal Areas used by MPCA in their Environmental Justice Framework
+
 #'
 #' Data sources
 #' MN GEOCOMMONS: https://gisdata.mn.gov/
@@ -30,10 +30,11 @@
 #'
 #' @export
 
-get_tribes <- function(path         = getwd(),
-                       folder_name  = "mpca_tribe_shapes",
+get_tribal_areas <- function(
+                       path         = getwd(),
+                       folder_name  = "mpca_tribal_areas",
                        add_date     = TRUE,
-                       use_latlong  = FALSE,
+                       use_latlong  = TRUE,
                        data_only    = FALSE) {
 
   # Data sources
@@ -60,7 +61,7 @@ get_tribes <- function(path         = getwd(),
 
       message("Update check failed. Returning stored file from May, 2020.")
 
-      #data(tribe_shapes, envir = e)
+      #(tribe_shapes, envir = e)
 
       shapes <- tribe_shapes
 
@@ -107,15 +108,8 @@ get_tribes <- function(path         = getwd(),
 
      # Drop geometry if requested
      if(data_only) shapes <- sf::st_set_geometry(shapes, NULL)
-
   }
 
     return(shapes)
-
 }
-
-#use_data(ej_shapes, internal = FALSE,
-#         overwrite = FALSE,
-#         compress = "bzip2",
-#         version = 3)
 

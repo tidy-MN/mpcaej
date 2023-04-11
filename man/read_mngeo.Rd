@@ -5,8 +5,8 @@
 \title{Get Shapefiles from the MN Geocommons}
 \usage{
 read_mngeo(
- 
-    url = "https://resources.gisdata.mn.gov/pub/gdrs/data/pub/us_mn_state_pca/env_ej_mpca_census/shp_env_ej_mpca_census.zip",
+  url =
+    "https://resources.gisdata.mn.gov/pub/gdrs/data/pub/us_mn_state_pca/env_ej_mpca_census/shp_env_ej_mpca_census.zip",
   layer = "ej_mpca_census.shp",
   path = getwd(),
   folder_name = "mngeo_shapes",

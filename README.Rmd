@@ -1,6 +1,5 @@
 ---
-output:
-    github_document
+output: github_document
 R-Package: mpcaej
 Version: 0.0.0.9000
 ---
@@ -9,9 +8,9 @@ Version: 0.0.0.9000
 
 This package contains two shapefiles provided by the MN Pollution Control Agency:
 
-* `ej_shapes` _(blue below)_: Census Tracts polgons and deomgraphic data for areas that meet MPCA's Environmental Justice criteria.
+* `ej_areas` _(blue below)_: Census Tract polygons and deomgraphic data for areas that meet MPCA's Environmental Justice criteria.
 
-* `tribe_shapes` _(purple below)_: Areas and names of Tribal Nations near Minnesota.
+* `tribal_areas` _(purple below)_: Areas and names of Tribal Nations and communities neighboring Minnesota.
   
 ![](ej_map.png)
 
@@ -33,22 +32,22 @@ remotes::install_github("MPCA-data/mpcaej")
 
 ## Use
 
-You can load the shapefiles into your workspace by entering their names in the console after loading the package.
+To load the shapefiles into your workspace:
 
 ```{r, eval=F}
 library(mpcaej)
 
 # Census Tract information
-ej <- ej_shapes
+ej <- get_ej_areas()
 
 # Tribal area polygons
-tribes <- tribe_shapes
+tribal_areas <- get_tribal_areas()
 
 ```
 
 
 
-## Leaflet map of shapes
+## Leaflet map of polygons
 ```{r, eval=F}
 map_ej()
 

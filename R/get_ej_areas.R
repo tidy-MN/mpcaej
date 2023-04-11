@@ -1,7 +1,6 @@
 #' Get MPCA's Environmental Justice Shapefiles from the MN Geocommons
 #'
-#' Download the polygon shapefile of Census Tracts identified by MPCA
-#' as Environmental Justice areas of concern.
+#' Download a polygon shapefile of Census Tracts with data columns identifying the status MPCA as Environmental Justice areas of concern.
 #'
 #' Data sources
 #' MN GEOCOMMONS: https://gisdata.mn.gov/
@@ -30,10 +29,10 @@
 #'
 #' @export
 
-get_ej <- function(path         = getwd(),
-                   folder_name  = "mpca_ej_shapes",
+get_ej_areas <- function(path         = getwd(),
+                   folder_name  = "mpca_ej_areas",
                    add_date     = TRUE,
-                   use_latlong  = FALSE,
+                   use_latlong  = TRUE,
                    data_only    = FALSE) {
 
   # Data sources
@@ -112,11 +111,4 @@ get_ej <- function(path         = getwd(),
   }
 
     return(shapes)
-
 }
-
-#use_data(ej_shapes, internal = FALSE,
-#         overwrite = FALSE,
-#         compress = "bzip2",
-#         version = 3)
-
