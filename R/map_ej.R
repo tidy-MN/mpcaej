@@ -24,12 +24,12 @@ map_ej <- function() {
   #library(leaflet)
 
   # Load shapes & transform to Lat/Long WGS84 coordinates
-  ej_shapes    <- sf::st_transform(ej_shapes, 4326)
+  ej_shapes <- get_ej_areas()
 
-  tribe_shapes <- sf::st_transform(tribe_shapes, 4326)
+  tribe_shapes <- get_tribal_areas()
 
   # Only EJ areas of concern
-  ej_shapes <- subset(ej_shapes, statuspoc == "YES" | status185x == "YES")
+  ej_shapes <- subset(ej_shapes, statuspoc == "YES" | status200x == "YES" | statuslep == "YES")
 
   # Center on Brainerd
   center <- data.frame(lat = 46.346, lng = -94.179)
@@ -50,8 +50,9 @@ map_ej <- function() {
                 popup         = ~paste0('<h3 align="center"> Census Tract: ',
                                         as.character(geoid), '</h3>',
                                         '<hr style="margin-top: -4px; margin-bottom: -2px;">',
-                                        '<p style="font-size: 14px;"><b>Population: </b> ', format(as.numeric(total_pop), big.mark = ","), '</p>',
+                                        #'<p style="font-size: 14px;"><b>Population: </b> ', format(as.numeric(total_pop), big.mark = ","), '</p>',
                                         '<p style="font-size: 14px;"><b>Meets low income criteria: </b> ', as.character(status185x), '</p>',
+                                        '<p style="font-size: 14px;"><b>Meets LEP criteria: </b> ', as.character(statuslep), '</p>',
                                         '<p style="font-size: 14px;"><b>Meets POC criteria: </b> ', as.character(statuspoc), '</p>')) %>%
     leaflet::addPolygons(color = "purple",
                          weight         = 1.1,
