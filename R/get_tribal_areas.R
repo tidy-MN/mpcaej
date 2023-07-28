@@ -48,7 +48,7 @@ get_tribal_areas <- function(
 
      date_text <- web_text[grepl("dataset-details", web_text)]
 
-     sum(grepl("6/6/2019", date_text)) < 1
+     sum(grepl("2023-07-25", date_text)) < 1
 
   }
 
