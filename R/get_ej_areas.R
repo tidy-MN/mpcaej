@@ -57,7 +57,7 @@ get_ej_areas <- function(path   = getwd(),
   # If check fails, use saved version
   if (is.na(updated)) {
 
-      message("Update check failed. Returning stored file from May, 2020.")
+      message("Update check failed. Returning stored file from July, 2023.")
 
       data(ej_shapes, envir = e)
 
@@ -72,7 +72,7 @@ get_ej_areas <- function(path   = getwd(),
 
   } else if (!updated) { # If no updates, use saved version
 
-      message("No updates yet. Returning stored file from May, 2020.")
+      message("No updates found. Returning the archived file from July, 2023")
 
       data(ej_shapes, envir = e) #envir = globalenv())
 
