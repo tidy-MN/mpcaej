@@ -107,7 +107,7 @@ get_ej_areas <- function(path         = getwd(),
      # Drop geometry if requested
      if(data_only) shapes <- sf::st_set_geometry(shapes, NULL)
 
-     shapes <- dplyr::rename(shapes, total_pop = tot)
+     #shapes <- dplyr::rename(shapes, total_pop = tot)
   }
 
     return(shapes)
