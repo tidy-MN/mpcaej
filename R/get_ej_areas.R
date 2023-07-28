@@ -72,7 +72,7 @@ get_ej_areas <- function(path   = getwd(),
 
   } else if (!updated) { # If no updates, use saved version
 
-      message("No updates found. Returning the archived file from July, 2023")
+      message("No updates found for ej areas. Returning the archived file from July, 2023")
 
       data(ej_shapes, envir = e) #envir = globalenv())
 
