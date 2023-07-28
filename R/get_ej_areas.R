@@ -29,7 +29,7 @@
 #'
 #' @export
 
-get_ej_areas <- function(path         = getwd(),
+get_ej_areas <- function(path   = getwd(),
                    folder_name  = "mpca_ej_areas",
                    add_date     = TRUE,
                    use_latlong  = TRUE,
@@ -46,7 +46,7 @@ get_ej_areas <- function(path         = getwd(),
 
      date_text <- web_text[grepl("dataset-details", web_text)]
 
-     sum(grepl("6/6/2019", date_text)) < 1
+     sum(grepl("2023-07-25", date_text)) < 1
 
   }
 
