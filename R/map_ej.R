@@ -51,7 +51,7 @@ map_ej <- function() {
                                         as.character(geoid), '</h3>',
                                         '<hr style="margin-top: -4px; margin-bottom: -2px;">',
                                         #'<p style="font-size: 14px;"><b>Population: </b> ', format(as.numeric(total_pop), big.mark = ","), '</p>',
-                                        '<p style="font-size: 14px;"><b>Meets low income criteria: </b> ', as.character(status185x), '</p>',
+                                        '<p style="font-size: 14px;"><b>Meets low income criteria: </b> ', as.character(status200x), '</p>',
                                         '<p style="font-size: 14px;"><b>Meets LEP criteria: </b> ', as.character(statuslep), '</p>',
                                         '<p style="font-size: 14px;"><b>Meets POC criteria: </b> ', as.character(statuspoc), '</p>')) %>%
     leaflet::addPolygons(color = "purple",
