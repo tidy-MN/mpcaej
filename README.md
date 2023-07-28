@@ -17,11 +17,11 @@ Control Agency:
 To install `mpcaej` from github:
 
 ``` r
-# First install the 'devtools' package
-library(devtools)
+# First install the 'remotes' package
+install.packages("remotes")
 
 # Install the development version from GitHub
-remotes::install_github("MPCA-data/mpcaej")
+remotes::install_github("tidy-MN/mpcaej")
 ```
 
 ------------------------------------------------------------------------
