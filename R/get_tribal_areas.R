@@ -74,7 +74,7 @@ get_tribal_areas <- function(
 
   } else if (!updated) { # If no updates, use saved version
 
-      message("No updates found. Returning the archived file from July, 2023")
+      message("No updates found for tribal areas. Returning the archived file from July, 2023")
 
       #data(ej_shapes, envir = e) #envir = globalenv())
 
