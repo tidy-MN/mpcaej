@@ -56,7 +56,7 @@ map_ej <- function() {
                                         '<p style="font-size: 14px;"><b>Meets POC criteria: </b> ', as.character(statuspoc), '</p>')) %>%
     leaflet::addPolygons(color = "purple",
                          weight         = 1.1,
-                         smoothFactor   = 1.4,
+                         smoothFactor   = 0.5,
                          opacity        = 0.95,
                          fillOpacity    = 0.2,
                          popup          =  ~paste0('<h3 align="center">', as.character(name), '</h3>',
@@ -68,6 +68,3 @@ map_ej <- function() {
   print(map)
 
 }
-
-
-
